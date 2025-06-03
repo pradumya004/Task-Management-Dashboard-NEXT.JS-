@@ -1,78 +1,88 @@
+# Task Management Dashboard
+
+A full-stack task management application with drag-and-drop Kanban board functionality.
+
+## Features
+
+- ✅ Create, edit, and delete tasks
+- 📋 Dashboard with task cards and statistics  
+- 🎯 Kanban board with drag-and-drop
+- 🔍 Filter and sort tasks
+- 📱 Responsive design
+- ⏰ Due date tracking with overdue detection
+
+## Tech Stack
+
+**Frontend:** Next.js, React, Tailwind CSS, Zustand  
+**Backend:** Express.js, MongoDB, Mongoose  
+**Extras:** @dnd-kit for drag-and-drop, Axios for API calls
+
+## Quick Start
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/yourusername/task-management-dashboard.git
+cd task-management-dashboard
+```
+
+### 2. Backend Setup
+```bash
+cd backend
+npm install
+
+# Create .env file
+echo "MONGODB_URI=mongodb://localhost:27017
+PORT=8000
+CORS_ORIGIN=http://localhost:3000" > .env
+
+# Start backend
+npm run dev
+```
+
+### 3. Frontend Setup  
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+
+### 4. Access Application
+- **Frontend:** http://localhost:3000
+- **Backend API:** http://localhost:8000/api
+
+## Project Structure
 
 ```
-Assignment
-├─ backend
-│  ├─ .env
-│  ├─ .prettierignore
-│  ├─ .prettierrc
-│  ├─ app.js
-│  ├─ config
-│  │  └─ db.config.js
-│  ├─ constants.js
-│  ├─ controllers
-│  │  └─ task.controllers.js
-│  ├─ middlewares
-│  ├─ models
-│  │  └─ task.models.js
-│  ├─ package-lock.json
-│  ├─ package.json
-│  ├─ routes
-│  │  └─ task.routes.js
-│  ├─ server.js
-│  └─ utils
-│     ├─ ApiError.js
-│     ├─ ApiResponse.js
-│     └─ asyncHandler.js
-├─ frontend
-│  ├─ .next/
-│  ├─ eslint.config.mjs
-│  ├─ jsconfig.json
-│  ├─ next.config.js
-│  ├─ package-lock.json
-│  ├─ package.json
-│  ├─ postcss.config.mjs
-│  ├─ public
-│  │  ├─ file.svg
-│  │  ├─ globe.svg
-│  │  ├─ next.svg
-│  │  ├─ vercel.svg
-│  │  └─ window.svg
-│  ├─ README.md
-│  ├─ src
-│  │  ├─ app
-│  │  │  ├─ globals.css
-│  │  │  ├─ kanban
-│  │  │  │  └─ page.jsx
-│  │  │  ├─ layout.js
-│  │  │  ├─ page.js
-│  │  │  └─ tasks
-│  │  │     └─ [id]
-│  │  │        └─ page.jsx
-│  │  ├─ components
-│  │  │  ├─ kanban
-│  │  │  │  ├─ KanbanBoard.jsx
-│  │  │  │  ├─ KanbanCard.jsx
-│  │  │  │  └─ KanbanColumn.jsx
-│  │  │  ├─ layout
-│  │  │  │  └─ Header.jsx
-│  │  │  ├─ tasks
-│  │  │  │  ├─ TaskCard.jsx
-│  │  │  │  ├─ TaskFilters.jsx
-│  │  │  │  ├─ TaskForm.jsx
-│  │  │  │  └─ TaskList.jsx
-│  │  │  └─ ui
-│  │  │     ├─ Badge.jsx
-│  │  │     ├─ Button.jsx
-│  │  │     ├─ Input.jsx
-│  │  │     └─ Modal.jsx
-│  │  ├─ lib
-│  │  │  ├─ api.js
-│  │  │  ├─ constants.js
-│  │  │  └─ utils.js
-│  │  └─ store
-│  │     └─ taskStore.js
-│  └─ tailwind.config.js
-├─ internship_task.docx
-└─ README.md
-
+├── frontend/          # Next.js app
+│   ├── src/app/       # Pages (dashboard, kanban, task details)
+│   ├── src/components/# UI components
+│   ├── src/lib/       # API client & utilities
+│   └── src/store/     # Zustand state management
+├── backend/           # Express.js API
+│   ├── src/controllers/# Route handlers
+│   ├── src/models/    # MongoDB schemas
+│   ├── src/routes/    # API routes
+│   └── src/config/    # Database config
 ```
+
+## API Endpoints
+
+- `GET /api/tasks` - Get all tasks
+- `POST /api/tasks` - Create task
+- `GET /api/tasks/:id` - Get single task
+- `PUT /api/tasks/:id` - Update task
+- `DELETE /api/tasks/:id` - Delete task
+
+## Usage
+
+1. **Create Tasks:** Click "+ Create Task" button
+2. **View/Edit:** Click on any task card
+3. **Kanban Board:** Navigate to Kanban page and drag tasks between columns
+4. **Filter:** Use dropdown filters for status and sorting
+
+## Requirements
+
+- Node.js 18+
+- MongoDB (local or Atlas)
+
+That's it! 🚀
