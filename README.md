@@ -1,5 +1,4 @@
 
-
 ```
 Assignment
 ├─ backend
@@ -18,26 +17,61 @@ Assignment
 │  ├─ package-lock.json
 │  ├─ package.json
 │  ├─ routes
+│  │  └─ task.routes.js
 │  ├─ server.js
 │  └─ utils
 │     ├─ ApiError.js
 │     ├─ ApiResponse.js
 │     └─ asyncHandler.js
 ├─ frontend
-│  ├─ eslint.config.js
-│  ├─ index.html
+│  ├─ .next/
+│  ├─ eslint.config.mjs
+│  ├─ jsconfig.json
+│  ├─ next.config.js
 │  ├─ package-lock.json
 │  ├─ package.json
+│  ├─ postcss.config.mjs
 │  ├─ public
-│  │  └─ vite.svg
+│  │  ├─ file.svg
+│  │  ├─ globe.svg
+│  │  ├─ next.svg
+│  │  ├─ vercel.svg
+│  │  └─ window.svg
 │  ├─ README.md
 │  ├─ src
-│  │  ├─ App.jsx
-│  │  ├─ assets
-│  │  │  └─ react.svg
-│  │  ├─ index.css
-│  │  └─ main.jsx
-│  └─ vite.config.js
+│  │  ├─ app
+│  │  │  ├─ globals.css
+│  │  │  ├─ kanban
+│  │  │  │  └─ page.jsx
+│  │  │  ├─ layout.js
+│  │  │  ├─ page.js
+│  │  │  └─ tasks
+│  │  │     └─ [id]
+│  │  │        └─ page.jsx
+│  │  ├─ components
+│  │  │  ├─ kanban
+│  │  │  │  ├─ KanbanBoard.jsx
+│  │  │  │  ├─ KanbanCard.jsx
+│  │  │  │  └─ KanbanColumn.jsx
+│  │  │  ├─ layout
+│  │  │  │  └─ Header.jsx
+│  │  │  ├─ tasks
+│  │  │  │  ├─ TaskCard.jsx
+│  │  │  │  ├─ TaskFilters.jsx
+│  │  │  │  ├─ TaskForm.jsx
+│  │  │  │  └─ TaskList.jsx
+│  │  │  └─ ui
+│  │  │     ├─ Badge.jsx
+│  │  │     ├─ Button.jsx
+│  │  │     ├─ Input.jsx
+│  │  │     └─ Modal.jsx
+│  │  ├─ lib
+│  │  │  ├─ api.js
+│  │  │  ├─ constants.js
+│  │  │  └─ utils.js
+│  │  └─ store
+│  │     └─ taskStore.js
+│  └─ tailwind.config.js
 ├─ internship_task.docx
 └─ README.md
 
