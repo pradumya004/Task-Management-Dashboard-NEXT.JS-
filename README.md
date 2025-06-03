@@ -21,8 +21,8 @@ A full-stack task management application with drag-and-drop Kanban board functio
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/task-management-dashboard.git
-cd task-management-dashboard
+git clone https://github.com/pradumya004/Task-Management-Dashboard-NEXT.JS-.git
+cd Task-Management-Dashboard-NEXT.JS-
 ```
 
 ### 2. Backend Setup
@@ -31,7 +31,7 @@ cd backend
 npm install
 
 # Create .env file
-echo "MONGODB_URI=mongodb://localhost:27017
+echo "MONGODB_URI=mongodb://localhost:27017 or your database url
 PORT=8000
 CORS_ORIGIN=http://localhost:3000" > .env
 
